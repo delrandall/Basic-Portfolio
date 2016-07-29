@@ -107,8 +107,26 @@ nav {
 	text-align: left;
 }
 
-#article {
-	color: white;	
+article {
+	float: left;
+	margin: 20px;
+	overflow: hidden;
+	position: relative;
+}
+
+article h3 {
+	background-color: teal;
+	color: white;
+	margin: 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: normal;
+	padding: 4px;
+	opacity: 0.75;
 }
 
 p.spaced {
@@ -131,6 +149,7 @@ p.spaced {
 }
 
 #h1 {
+	font-family: 'Georgia', Times, Times New Roman, serif;
 	display: block;
 	padding: 10px;
 	margin-top: 10px;
@@ -170,6 +189,30 @@ p.spaced {
 	margin-right: 1px;
 	background: teal;
 }
+
+<?php
+header('Content-type: text/css');
+?>
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+footer, .push {
+	height: 155px; /* '.push' must be the same height as 'footer' */
+}
+
+/*
+
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+
+*/
 
 #footer {
 	clear:  both;
